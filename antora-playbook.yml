@@ -1,0 +1,26 @@
+site:
+  title: "OpenShift Enablement Workshop"
+  start_page: openshift-enablement-workshop-docs::index.adoc
+  #url: "https://your-developerhub-url"
+
+content:
+  sources:
+    - url: https://github.com/na-launch/openshift-enablement-workshop-docs.git
+      edit_url: false
+      branches: HEAD
+      start_path: docs 
+ui:
+  bundle:
+    url: https://gitlab.com/redhat-docs/redhat-antora-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental_ui
+
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+
+output:
+  dir: ./site

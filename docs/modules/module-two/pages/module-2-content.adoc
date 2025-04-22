@@ -1,0 +1,96 @@
+== Module 2: Using Red Hat Dev Spaces
+:navtitle: Using Red Hat Dev Spaces
+
+== Git Repositories 
+
+*Python:* https://github.com/na-launch/openshift-enablement-workshop/tree/module2-python 
+
+*Dotnet:* https://github.com/na-launch/openshift-enablement-workshop/tree/module2-dotnet
+
+== Objectives
+Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language you choose for it.
+
+. The country is based on a 2-letter country code.  
+  * i.e `countryCode=IT` returns `ciao mondo` (IT is for Italy)
+. You can find all the mappings in the `translate.json` file.
+. There is also a timestamp after the “hello world” message.
+
+== Guided Exercise
+
+The application has some problems that we would like you to fix:
+
+. Run the following command to install the necessary dependencies:
++
+[source,sh]
+----
+pip install -r requirements.txt
+----
+
+. Your tests will not run with `pytest` because your environment variables are not set. Please set the following environment variables:
++
+[source,sh]
+----
+FLASK_APP=app.py
+FLASK_ENV=development
+PYTHONPATH=.
+----
+
+. Format the `hello` timestamp to use Eastern Standard Time (New York time).
+
+. Format the `hello` timestamp to display as `{HH:MM MM/DD/YYYY}`.
+
+. Write a test case that tests both the timezone and the new date format.
+
+. In `/routes/main.py`, create a new route that will respond to `/api/query`:
+  * The request should use the `GET` method.
+  * Append a query string to take an argument for the country code (e.g. `/api/query?countryCode=en`).
+  * Set the API to return the correct greeting based on the country code used in the query string.
+
+== Final Compilation
+
+. In a new terminal, run the app using Flask (not Python) with the following settings:
++
+[source,sh]
+----
+flask run --host=0.0.0.0 --port=8080
+----
+
+. Open a second terminal and run `pytest` to ensure all test cases are passing:
++
+[source,sh]
+----
+./pytest
+----
+
+== Bonus Tasks
+
+* Add an `/api/magic8` endpoint that returns a random country code (like a magic 8-ball) and returns a random "Hello World" greeting.
+
+* Write additional tests for `/api/query` and `/api/magic8`.
+
+* Add an additional endpoint for `/api/query` which functions the same but uses `POST` instead. Use `curl` to test it.
+
+* Attach a simple stylesheet that will change the background color to blue.
+
+* Put the "Hello World" message inside an HTML `<blockquote>` tag. Add color styling in the stylesheet to emphasize the blockquote area.
++
+Use `render_template` to render the HTML.
+
+* Your `styles.css` file can be kept in a new folder named `/static` (you can create this folder).
+
+* Your HTML files can be kept in a new folder named `/templates` (you can create this folder).
+
+== Easter Eggs!
+
+* There is an easter egg in the code.
+* Be thorough and review the code carefully.
+* Try to find and solve the Golden Egg! (Hint: it’s a two-step process)
+
+== Takeaways
+
+* First look at **Red Hat Dev Spaces**
+* Familiarize(d) yourself with setting up a Python App in Dev Spaces
+* Took advantage of 'quick build' python apps in a container
+* Using environment variables in your application
+* Used your first OpenShift Service / Route!
+

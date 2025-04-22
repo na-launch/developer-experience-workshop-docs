@@ -1,0 +1,26 @@
+{
+    "name": "openshift-enablement-workshop-docs",
+    "description": "OpenShift Enablement Workshop",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/na-launch/openshift-enablement-workshop-docs.git"
+    },
+    "scripts": {
+      "install-build": "npm i && npx antora antora-playbook.yml --stacktrace --fetch",
+      "build": "npm i -D -E && npx antora antora-playbook.yml --stacktrace --fetch"
+    },
+    "keywords": [
+      "Openshift",
+      "DeveloperHub",
+      "DevSpaces",
+      "Serverless",
+      "OpenTelemetry",
+      "Workshop"
+    ],
+    "author": "Launch Team",
+    "dependencies": {
+      "@antora/cli": "^3.1.10",
+      "@antora/site-generator": "^3.1.10"
+    }
+  }
