@@ -18,12 +18,18 @@ For this workshop in Python and .NET, the auto instrumentation libraries send da
 
 Inside your workspace is a Python application that listens on `/api/check` for web requests and returns an HTTP `200` or `500` status code based on the payload.
 
-. From the Terminal, deploy the Python Application in your project using:
+. From the Terminal, build the Python Application in your project using:
 +
 [source,sh]
 ----
 oc new-build --binary --name workshop-<your username>
 oc start-build workshop-<your username> --from-dir=. 
+----
+
+After a few seconds, an imagestream should be available and you can deploy the Python Application:
++
+[source,sh]
+----
 oc new-app workshop-<your username> --name workshop-<your username>
 ----
 +
