@@ -1,0 +1,38 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: workshop-docs
+  namespace: shared-config
+---
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: workshop-docs-build
+  namespace: shared-config
+spec:
+  failedBuildsHistoryLimit: 3
+  output:
+    to:
+      kind: ImageStreamTag
+      name: workshop-docs:latest
+      namespace: shared-config
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/na-launch/openshift-enablement-workshop-docs.git
+      ref: main
+    type: Git
+  strategy:
+    dockerStrategy:
+      env:
+        - name: http_proxy
+          value: 'http://localhost:3128'
+        - name: https_proxy
+          value: 'https://localhost:3128'
+        - name: no_proxy
+          value: '*'
+      dockerfilePath: Containerfile
+    type: Docker
+  successfulBuildsHistoryLimit: 3
+  triggers:
+  - type: ConfigChange
