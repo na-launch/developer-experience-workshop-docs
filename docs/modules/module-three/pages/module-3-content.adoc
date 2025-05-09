@@ -3,9 +3,9 @@
 
 == Git Repositories 
 
-*Python:* https://github.com/na-launch/openshift-enablement-workshop/tree/module3-python 
+*Python:* https://github.com/na-launch/developer-experience-workshop/tree/module3-python 
 
-*Dotnet:* https://github.com/na-launch/openshift-enablement-workshop/tree/module3-dotnet
+*Dotnet:* https://github.com/na-launch/developer-experience-workshop/tree/module3-dotnet
 
 == Objectives
 

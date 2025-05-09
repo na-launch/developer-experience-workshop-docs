@@ -1,8 +1,8 @@
-= OpenShift Enablement Workshop
+= Developer Experience Workshop
 
 == Greetings!
 
-Welcome to the Red Hat OpenShift Enablement Workshop!  We're excited to have you join us as we dive into modern software development workflows, tools, and best practices using the Red Hat development stack.
+Welcome to the Red Hat Developer Experience Workshop!  We're excited to have you join us as we dive into modern software development workflows, tools, and best practices using the Red Hat development stack.
 
 == Let's Get Started!
 

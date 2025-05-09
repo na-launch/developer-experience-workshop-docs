@@ -1,10 +1,10 @@
 {
-    "name": "openshift-enablement-workshop-docs",
-    "description": "OpenShift Enablement Workshop",
+    "name": "developer-experience-workshop-docs",
+    "description": "Developer Experience Workshop",
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/na-launch/openshift-enablement-workshop-docs.git"
+      "url": "git+https://github.com/na-launch/developer-experience-workshop-docs.git"
     },
     "scripts": {
       "install-build": "npm i && npx antora antora-playbook.yml --stacktrace --fetch",

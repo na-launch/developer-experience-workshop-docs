@@ -1,5 +1,5 @@
-name: openshift-enablement-workshop-docs
-title: OpenShift Enablement Workshop
+name: development-experience-workshop-docs
+title: Developer Experience Workshop
 version: main 
 nav: 
 - modules/ROOT/nav.adoc

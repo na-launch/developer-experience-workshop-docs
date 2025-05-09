@@ -3,9 +3,9 @@
 
 == Git Repositories 
 
-*Python:* https://github.com/na-launch/openshift-enablement-workshop/tree/module2-python 
+*Python:* https://github.com/na-launch/developer-experience-workshop/tree/module2-python 
 
-*Dotnet:* https://github.com/na-launch/openshift-enablement-workshop/tree/module2-dotnet
+*Dotnet:* https://github.com/na-launch/developer-experience-workshop/tree/module2-dotnet
 
 == Objectives
 Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language you choose for it.
